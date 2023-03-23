@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * print_most_numbers - print numbers from 0 to 9
- * description: print the numbers from 0 to p excluding 2 and 4
- * Return: the numbers from 0 to 9
+ * print_most_numbers - print numbers sice 0 up to 9
+ * Description: print the numbers excluding 2 and 4
+ * Return: the numbers sice 0 up to 9
  */
 
 void  print_most_numbers(void)
