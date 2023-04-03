@@ -22,7 +22,7 @@ char *_strstr(char *haystack, char *needle)
 	num2++;
 	}
 
-	if (+num2 == '\0')
+	if (*num2 == '\0')
 	{
 	return (haystack);
 	}
