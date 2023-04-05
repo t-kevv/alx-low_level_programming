@@ -2,13 +2,13 @@
 
 
 /**
- * stlen - returns lenght if a string
+ * _stlen - returns lenght if a string
  * @s: string
  *
  * Return: always 0
  */
 
-int stlen(char *s)
+int _stlen(char *s)
 {
 	if (*s == '\0')
 	{
@@ -16,7 +16,7 @@ int stlen(char *s)
 	}
 	else
 	{
-		return (1 + stlen(s + 1));
+		return (1 + _stlen(s + 1));
 	}
 }
 
@@ -31,7 +31,7 @@ int stlen(char *s)
 
 int check(char *s, int st, int en)
 {
-	if (*(s + st) == (s + en))
+	if (*(s + st) == *(s + en))
 	{
 		if (st == en || st == en + 1)
 		{
