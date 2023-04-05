@@ -1,5 +1,25 @@
 #include "main.h"
 
+
+/**
+ * stlen - returns lenght if a string
+ * @s: string
+ *
+ * Return: always 0
+ */
+
+int stlen(char *s)
+{
+	if (*s == '\0')
+	{
+		return (0);
+	}
+	else
+	{
+		return (1 + stlen(s + 1));
+	}
+}
+
 /**
  * check - check if string is a polindrome
  * @s: string
@@ -11,17 +31,15 @@
 
 int check(char *s, int st, int en)
 {
-	if (st >= en)
+	if (*(s + st) == (s + en))
 	{
+		if (st == en || st == en + 1)
+		{
 		return (1);
+		}
+		return (0 + check(s, st + 1, en - 1));
 	}
-
-	if (s[st] != s[en])
-	{
-		return (0);
-	}
-
-	return (check(s, st + 1, en - 1));
+	return (0);
 }
 
 /**
@@ -34,7 +52,9 @@ int check(char *s, int st, int en)
 int is_palindrome(char *s)
 
 {
-	int len = strlen(s);
-
-	return (check(s, 0, len - 1));
+	if (*s == '\0')
+	{
+		return (1);
+	}
+	return (check(s, 0, stlen(s) - 1));
 }
