@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * flip_bits - counts number of bit
+ * flip_bits - returns number of bit
  * @n: number
  * @m: number
  *
